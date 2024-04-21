@@ -12,7 +12,7 @@ function App() {
 
   const router = createBrowserRouter([
     {
-      path: '/merch-shop/',
+      path: 'pvtprinny.github.io/merch-shop/',
       element:  <div>
                   <Header />
                   <Home />
