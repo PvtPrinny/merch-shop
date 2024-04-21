@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div className='index-div'>
-    <App />
+    <BrowserRouter basename={"/merch-shop"}>
+      <App />
+    </BrowserRouter>
   </div>
 );
 
