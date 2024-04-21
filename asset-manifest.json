@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/merch-shop/static/css/main.9d7f6546.css",
-    "main.js": "/merch-shop/static/js/main.6e3462e4.js",
+    "main.js": "/merch-shop/static/js/main.ea20bc95.js",
     "static/media/pexels-kubiceknov-924824.jpg": "/merch-shop/static/media/pexels-kubiceknov-924824.3fdd6cf0bf750d8d481b.jpg",
     "static/media/Prinny.png": "/merch-shop/static/media/Prinny.aba12e921ec84821e322.png",
     "static/media/C1_Xs9lVEAAxd1E.png": "/merch-shop/static/media/C1_Xs9lVEAAxd1E.147d08af7df4c29940bb.png",
@@ -9,10 +9,10 @@
     "static/media/home.png": "/merch-shop/static/media/home.f6281babda22bda2c9c1.png",
     "index.html": "/merch-shop/index.html",
     "main.9d7f6546.css.map": "/merch-shop/static/css/main.9d7f6546.css.map",
-    "main.6e3462e4.js.map": "/merch-shop/static/js/main.6e3462e4.js.map"
+    "main.ea20bc95.js.map": "/merch-shop/static/js/main.ea20bc95.js.map"
   },
   "entrypoints": [
     "static/css/main.9d7f6546.css",
-    "static/js/main.6e3462e4.js"
+    "static/js/main.ea20bc95.js"
   ]
 }
