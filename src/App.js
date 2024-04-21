@@ -12,7 +12,7 @@ function App() {
 
   const router = createBrowserRouter([
     {
-      path: '/',
+      path: '/merch-shop',
       element:  <div>
                   <Header />
                   <Home />
