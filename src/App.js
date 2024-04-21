@@ -12,7 +12,7 @@ function App() {
 
   const router = createBrowserRouter([
     {
-      path: '/',
+      path: '/merch-shop',
       element:  <div>
                   <Header />
                   <Home />
@@ -21,7 +21,7 @@ function App() {
       errorElement: <NotFound />
     },
     {
-      path: '/about',
+      path: '/merch-shop/about',
       element:  <div>
                   <Header />
                   <About />
