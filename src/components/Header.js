@@ -96,7 +96,7 @@ const Header = () => {
 
           <nav className={`dropdown-menu ${logo === PLogo2 ? 'active' : 'inactive'}`}>
             <ul>
-              <DropdownItem img = {HomeLogo} text={"/"} linkName={"Home"} />
+              <DropdownItem img = {HomeLogo} text={""} linkName={"Home"} />
               <DropdownItem img = {HomeLogo} text={"About"} linkName={"About"}/>
             </ul>
           </nav>
@@ -112,7 +112,7 @@ function DropdownItem(props){
   return(
     <li className = 'dropdownItem'>
       <img src={props.img} alt={props.linkName}></img>
-      <Link to={`${props.text}`}>{props.linkName}</Link>
+      <Link to={`/${props.text}`}>{props.linkName}</Link>
     </li>
   );
 }

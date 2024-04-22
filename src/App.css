@@ -15,14 +15,9 @@ body {
   width: calc(100vw - 100%);
 }
 .app-div{
-  margin-left:auto;
-  margin-right:auto;
+  /* margin-left:auto;
+  margin-right:auto; */
   width:112.5rem; /* this 3 code helps keep the webpage proportional and in place while the user is zooming in and out */
-}
-
-.home-div{
-    /* position: static; */  
-
 }
 
 .home-bg{
@@ -45,6 +40,7 @@ body {
   width: 100%;
 }
 
+/* footer begins*/
 .footer {
   bottom: 0;
   width: 121.5rem;
@@ -54,16 +50,66 @@ body {
 }
 
 .footer2 {
-  /* positon:absolute; */
   position:absolute;
   bottom:0;
   margin-top: 100%;
-  width: 120rem;
+  width: 123.7rem;
   margin-left: -3.72rem;
   background-color: black;
   height: 12rem;
 }
+/* footer ends*/
 
+/* HEADER BEGINS */
+
+.login-btn{
+  position: absolute;
+  
+}
+
+.sign-in{
+  position:absolute;
+  margin-left: 1512px;
+  white-space: nowrap;
+  margin-top: 20px;
+}
+
+/*  Auth component begin */
+.auth-form{
+  position: fixed;
+  border-radius: 15px;
+  background-color: rgb(66, 218, 218);
+  padding-top: 30px;
+  text-align: center;
+  width: 500px;
+  height: 360px;
+  top:30%;
+  left:40%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.show-password{
+  display: flex; /* Use flexbox layout */
+  margin-left: 39.5px;/* margin-left: 40px; */
+}
+.show-password2{
+  display: flex; /* Use flexbox layout */
+  margin-left: 30px;/* margin-left: 40px; */
+}
+
+.LoginError{
+  height: 20px;
+  color: red;
+  visibility: hidden;
+  margin-top: 4px;
+  text-align: center;
+}
+/*  Auth component ends */
+
+/* Prinny Drop-down bar*/
 ul{
     list-style: none;
 }
@@ -129,7 +175,17 @@ a {
   transition: var(--speed);
 }
 
+/* Prinny Drop-down bar ends*/
 
+.User-Status{
+  position: absolute;
+  margin-left: 1200px;  
+  white-space: nowrap;
+}
+
+/* HEADER ENDS */
+
+/* MERCH STORE BEGINS */
 .home-item-container{
   display: flex;
   flex-wrap:wrap;
@@ -141,6 +197,7 @@ a {
   margin-bottom: 15rem;
 }
 
+
 .ShoppingBag-btn-div{
   margin-left: 1550px;
   margin-top: 20px;
@@ -151,6 +208,34 @@ a {
   align-content: center;
   text-align: center;
   border-radius: 6px;
+}
+
+/* Shopping cart component */
+
+.Checkout-message{
+  border-radius: 5px;
+  text-align: center;
+  position: fixed;
+  background-color: rgb(66, 218, 218);
+  width: 20rem;
+  height: 9rem;
+  top:40%;
+  left:45%;
+}
+
+.ShoppingCartImg{
+  position: absolute;
+}
+
+
+.ShoppingCartItem{
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.CartProductImg{
+  width: 80px;
+  margin: 3px;
 }
 
 .itemInCart{
@@ -202,64 +287,11 @@ a {
   margin-left:15px;
 }
 
-.login-btn{
-  position: absolute;
-  
-}
-
-.sign-in{
-  position:absolute;
-  margin-left: 1512px;
-  white-space: nowrap;
-  margin-top: 20px;
-}
-
-.auth-form{
-  position: fixed;
-  border-radius: 15px;
-  background-color: rgb(66, 218, 218);
-  padding-top: 30px;
-  text-align: center;
-  width: 500px;
-  height: 360px;
-  top:30%;
-  left:40%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.show-password{
-  display: flex; /* Use flexbox layout */
-  margin-left: 39.5px;/* margin-left: 40px; */
-}
-.show-password2{
-  display: flex; /* Use flexbox layout */
-  margin-left: 30px;/* margin-left: 40px; */
-}
-.LoginError{
-  height: 20px;
-  color: red;
-  visibility: hidden;
-  margin-top: 4px;
-  text-align: center;
-}
 
 .error-message.show {
   visibility: visible;
 }
 
-
-.User-Status{
-  position: absolute;
-  margin-left: 1200px;  
-  white-space: nowrap;
-}
-
-.ShoppingCartImg{
-  position: absolute;
-}
 
 .ShoppingCartContent{
   position: absolute;
@@ -271,16 +303,6 @@ a {
   align-content: center;
   min-height: 100px;
   padding: 2px;
-}
-
-.ShoppingCartItem{
-  display: flex;
-  margin-bottom: 5px;
-}
-
-.CartProductImg{
-  width: 80px;
-  margin: 3px;
 }
 
 .CartProductDescription{
@@ -327,6 +349,15 @@ a {
   left:45%;
 }
 
+/* Shopping cart component ends */
+
+/* ABOUT PAGE BEGINS */
 .about-content{
   height: auto;
 }
+
+.about-div{
+  margin-left: 50px;
+  margin-top: 30px;
+}
+/* ABOUT PAGE ENDS */

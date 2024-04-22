@@ -21,7 +21,13 @@ export const Auth = () => {
             await createUserWithEmailAndPassword(auth, registerEmail, registerPassword);
         }catch(err) {
             console.error(err);
-            setErrorMessage("Invalid Email or Password!");
+            if(err.message == "Firebase: Error (auth/email-already-in-use)."){
+              setErrorMessage("Email already in use!")
+            }
+            else{
+              setErrorMessage("Invalid Email or Password!");
+            }
+
         }
     };
 

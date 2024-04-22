@@ -6,6 +6,8 @@ import { getDocs, collection, addDoc } from "firebase/firestore";
 import ShoppingCart from '../components/ShoppingCart.js';
 import { auth } from "../config/firebase";
 import { onAuthStateChanged } from 'firebase/auth';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 function Home() {
 
@@ -165,7 +167,8 @@ function Home() {
   }
   
   return (
-    
+    <div>
+    <Header />
     <div className='home-div'>
       <h1 style={{color: 'white'}}>Prinny's Merch Shop</h1>
       
@@ -180,7 +183,7 @@ function Home() {
       { toggleLoginRemind && <div className='Login-Reminder'><div><h3>Need to log in first!!</h3></div>
       <div><button onClick={() => {setToggleLoginRemind(false)}}>Ok</button></div></div>}
 
-      { successfulMessage && <div className='Login-Reminder'><div><h3>Checkout Successful!!</h3><h4>Payment screen WIP</h4></div>
+      { successfulMessage && <div className='Checkout-message'><div><h3>Checkout Successful!!</h3><h5>(Payment screen WIP)</h5></div>
       <div><button onClick={() => {setSuccessfulMessage(false)}}>Ok</button></div></div>}
 
       <div className="home-item-container">
@@ -201,6 +204,8 @@ function Home() {
         ))}
         
       </div>
+    </div>
+    <Footer />
     </div>
   )
 }
