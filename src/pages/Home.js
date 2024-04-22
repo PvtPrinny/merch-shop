@@ -241,15 +241,12 @@ return (
     </div>
     {showDetails && (
         <div className={`description-container ${isActive ? 'active' : ''}`}>
-          <h1>{productName}</h1>
+          <h4>{productName}</h4>
           <br/>
           <br/>
           <div className="description">
               {description}
           </div>
-          <br/>
-          <br/>
-          <br/>
           <div className="stock-info">
           Price: ${productPrice}
           <br/>
