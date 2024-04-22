@@ -46,7 +46,7 @@ export const Auth = () => {
       try{
         await signInWithPopup(auth, googleProvider);
       }catch(err){
-        console.error(err);
+        console.error("Google sign-in error: ", err);
       }
     };
 

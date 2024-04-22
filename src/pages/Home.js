@@ -241,7 +241,7 @@ return (
     </div>
     {showDetails && (
         <div className={`description-container ${isActive ? 'active' : ''}`}>
-          {productName}
+          <h1>{productName}</h1>
           <br/>
           <br/>
           <div className="description">
