@@ -1,9 +1,9 @@
 import './App.css';
-import React from 'react';
-import { HashRouter, Route, Routes, Link } from "react-router-dom";
 import Home from './pages/Home';
 import About from './pages/About';
+import React from 'react';
 import NotFound from './pages/NotFound';
+import { HashRouter, Route, Routes, Link } from "react-router-dom";
 
 function App() {
   return (

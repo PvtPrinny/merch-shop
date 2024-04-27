@@ -1,22 +1,20 @@
-import { useState, useEffect } from 'react'
+import '../App.css';
 import PLogo from '../Prinny.png'
 import PLogo2 from '../C1_Xs9lVEAAxd1E.png'
 import HomeLogo from '../home.png'
-import '../App.css';
 import { Link } from 'react-router-dom';
-
 import { Auth } from "../components/Auth"; // for logging in
 import { auth } from "../config/firebase";
+import { useState, useEffect } from 'react'
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 
 
 const Header = () => {
 
+  const [user,setUser] = useState({});
   const [logo,setLogo] = useState(PLogo);
   const [isOpen,setIsOpen] = useState(false);
   const [loginScreenVisible, setLoginScreenVisible] = useState(false);
-
-  const [user,setUser] = useState({});
 
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
@@ -25,9 +23,7 @@ const Header = () => {
           setLoginScreenVisible(false);
         }
     });
-
   }, [])
-
 
   const handleClick = (e) => {
     setLogo(prev => (prev === PLogo ? PLogo2 : PLogo));
@@ -60,14 +56,13 @@ const Header = () => {
     return () => document.removeEventListener('mousedown', handleOutsideClick);
   }, [loginScreenVisible]); // Will only work when loginScreenVisible is changed.;
 
-
-    const handleSignOut = async () => {
-      try {
-        await signOut(auth);
-      } catch (err) {
-        console.error('Error signing out: ', err);
-      }
-    };
+  const handleSignOut = async () => {
+    try {
+      await signOut(auth);
+    } catch (err) {
+      console.error('Error signing out: ', err);
+    }
+  };
     
   return (
     <div>
@@ -88,7 +83,6 @@ const Header = () => {
           <nav className="header-trigger">
             <img src={logo} alt="prinny logo top right" className="header-logo" onClick={handleClick} />
           </nav>
-
           <nav className={`dropdown-menu ${logo === PLogo2 ? 'active' : 'inactive'}`}>
             <ul>
               <DropdownItem img = {HomeLogo} text={""} linkName={"Home"} />
@@ -97,9 +91,7 @@ const Header = () => {
           </nav>
         </nav>
       </nav>
-      
       <div id={loginScreenVisible ? "page-mask" : ""}>
-      
       </div>
       <div className={loginScreenVisible ? 'auth-form': ''}>
           {loginScreenVisible && <Auth loginScreenVisible={loginScreenVisible} />}
@@ -111,6 +103,7 @@ const Header = () => {
 
 
 function DropdownItem(props){
+
   return(
     <li className = 'dropdownItem'>
       <img src={props.img} alt={props.linkName}></img>

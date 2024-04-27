@@ -1,14 +1,11 @@
 body {
   background-image: url('./assets/pexels-kubiceknov-924824.jpg');
-  background-size: cover;
+  background-size:auto;
   background-position: center;
   background-repeat: no-repeat;
   margin:0;
   min-height: calc(100vw - 100%);
   padding-left: calc(100vw - 100%); /*prevents layout shift when scrollbar appears(100vw = Full width including the scrollbar, 100% = Full width excluding the scrollbar)*/
-  
-  /* display: flex;
-  flex-direction: column; */
   }
 
   #page-mask {
@@ -24,9 +21,7 @@ body {
   width: calc(100vw - 100%);
 }
 .app-div{
-  /* margin-left:auto;
-  margin-right:auto; */
-  width:112.5rem; /* this 3 code helps keep the webpage proportional and in place while the user is zooming in and out */
+  width:112.5rem;
 }
 
 .home-bg{
@@ -106,12 +101,12 @@ body {
 }
 
 .show-password{
-  display: flex; /* Use flexbox layout */
-  margin-left: 39.5px;/* margin-left: 40px; */
+  display: flex;
+  margin-left: 39.5px;
 }
 .show-password2{
-  display: flex; /* Use flexbox layout */
-  margin-left: 30px;/* margin-left: 40px; */
+  display: flex;
+  margin-left: 30px;
 }
 
 .LoginError{
@@ -132,7 +127,6 @@ body {
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
-
 /*  Auth component ends */
 
 /* Prinny Drop-down bar*/
@@ -248,6 +242,7 @@ a {
   top:40%;
   left:45%;
 }
+
 
 .ShoppingCartImg{
   position: absolute;
@@ -387,3 +382,74 @@ a {
   margin-top: 30px;
 }
 /* ABOUT PAGE ENDS */
+
+/* PAYMENT COMPONENT STARTS*/
+
+.VisaCardSample{
+  width:400px;
+  position:absolute;
+  margin-left: 240px;
+  margin-top: -30px;
+}
+
+.Payment-Div{
+  position: absolute;
+  background-color: #f2f2f2;
+  border: 1px solid lightgrey;
+  padding: 5px 20px 15px 20px;
+  border-radius: 5px;
+  top:30%;
+  left:30%;
+  width: 40rem;
+  height: 25rem;
+  text-align: left;
+}
+
+.payment-Form{
+  margin-top: 40px;
+  margin-left: 20px;
+  display: grid;
+  grid-template-columns: 220px ; /* width of grid */
+  grid-template-rows: 50px 50px 50px 50px;     /* height of grid */
+  height: 200px;
+}
+
+
+.CardHolderName{
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.CardNumber{
+  grid-row-start: 2;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.Expiry-div{
+  /* grid-column: 1 / span 2; */
+  display: flex;
+  gap: 10px;
+  /* justify-content: space-between; */
+}
+
+.Expiry-year-input{
+  width:80px;
+}
+
+.Expiry-month-input{
+  width:95px;
+}
+
+.cvc-input{
+  width:30px;
+}
+
+.Button-div{
+  display: flex;
+  text-align: center;
+  gap: 15px;
+  margin-left: 160px;
+}
+/* PAYMENT COMPONENT ENDS*/
