@@ -11,6 +11,15 @@ body {
   flex-direction: column; */
   }
 
+  #page-mask {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.6);
+  }
+
 .index-div{
   width: calc(100vw - 100%);
 }
@@ -38,6 +47,11 @@ body {
 .header-logo{
   height: 100%;
   width: 100%;
+}
+
+.header-home{
+  position: absolute;
+  top: 30px;
 }
 
 /* footer begins*/
@@ -107,6 +121,18 @@ body {
   margin-top: 4px;
   text-align: center;
 }
+
+.noselect {
+  margin-top: 5px;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
 /*  Auth component ends */
 
 /* Prinny Drop-down bar*/

@@ -83,11 +83,6 @@ const Header = () => {
       : 
         (!user && !user?.email && <button className="sign-in" onClick={handleLoginClick}>Sign-in</button>)
       }
-
-      <nav className={`${loginScreenVisible ? 'auth-form': ''}`}>
-        {loginScreenVisible && <Auth />}
-      </nav>
-
       <nav className="header-nav">
         <nav className="menu-container">
           <nav className="header-trigger">
@@ -102,6 +97,13 @@ const Header = () => {
           </nav>
         </nav>
       </nav>
+      
+      <div id={loginScreenVisible ? "page-mask" : ""}>
+      
+      </div>
+      <div className={loginScreenVisible ? 'auth-form': ''}>
+          {loginScreenVisible && <Auth loginScreenVisible={loginScreenVisible} />}
+      </div>
     </div>
   )
 }

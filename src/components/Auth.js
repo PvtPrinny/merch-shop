@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { auth, googleProvider } from "../config/firebase";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup, signOut } from 'firebase/auth'
 
-export const Auth = () => {
+export const Auth = ( {loginScreenVisible} ) => {
     const [loginEmail,setLoginEmail] = useState("");
     const [loginPassword, setLoginPassword] = useState("");
     const [registerEmail,setRegisterEmail] = useState("");
@@ -63,6 +63,7 @@ export const Auth = () => {
     };
 
   return (
+    <div>
     <div className="auth-form">
       {!toggleRegister && <div>
         <h1>Sign-In</h1>
@@ -91,8 +92,9 @@ export const Auth = () => {
             type="checkbox"
             checked={showPassword}
             onChange={handleShowPassword}
+            id="password-toggle"
           />
-          <h4>Show Password?</h4>
+          <label htmlFor="password-toggle" className="noselect">Show Password?</label>
         </div>
         {errorMessage && <div className={`"LoginError"${errorMessage ? "show" : ""}`} style={{color: 'red'}}>{errorMessage}</div>}
         {!errorMessage && <br/>}
@@ -134,8 +136,9 @@ export const Auth = () => {
             type="checkbox"
             checked={showPassword}
             onChange={handleShowPassword}
+            id="password-toggle"
           />
-          <h4>Show Password?</h4>
+          <label htmlFor="password-toggle" className="noselect">Show Password?</label>
         </div>
         {errorMessage && <div className={`"LoginError"${errorMessage ? "show" : ""}`} style={{color: 'red'}}>{errorMessage}</div>}
         {!errorMessage && <br/>}
@@ -147,6 +150,7 @@ export const Auth = () => {
         <br />
         <h5>Already have an account?      <button className="toggle-register" onClick={()=>{setToggleRegister(false); setErrorMessage(""); setShowPassword(false);}}>Log In</button></h5>
       </div>}
+    </div>
     </div>
   )
 }

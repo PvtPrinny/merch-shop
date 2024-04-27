@@ -8,20 +8,22 @@ import { auth } from "../config/firebase";
 import { onAuthStateChanged } from 'firebase/auth';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { Store } from 'react-notifications-component';
+import { ReactNotifications } from 'react-notifications-component'
+import 'react-notifications-component/dist/theme.css'
+
 
 function Home() {
 
-  const [productList, setProductList] = useState([]);
-  const [activeMerch,setActiveMerch] = useState(null);
+  const [productList, setProductList] = useState([]); // the product data acquired from firestore database
+  const [activeMerch,setActiveMerch] = useState(null); // set the active store item to show off it's description
 
-  const [productsInCart, setProductsInCart] = useState([]);
-  const [cartVisibility, setCartVisible] = useState(false);
-
-  const [totalCost, setTotalCost] = useState(0);
+  const [productsInCart, setProductsInCart] = useState([]); // manages the products in the shopping cart
+  const [cartVisibility, setCartVisible] = useState(false); // toggle for shopping cart
 
   const [user,setUser] = useState({});
 
-  const [toggleLoginRemind,setToggleLoginRemind] = useState(false);
+  const [toggleLoginRemind,setToggleLoginRemind] = useState(false); // reminds user to log in
   const [successfulMessage,setSuccessfulMessage] = useState(false);
 
   useEffect(() => { // checks whether any user is logged in
@@ -134,6 +136,7 @@ function Home() {
         return currentCart;
       }
       
+      manageNotification("Success!","item added to shopping cart");
 
       // Check if the product already exists in the cart
       const cartIndex = currentCart.findIndex(item => item.id === id);
@@ -160,15 +163,35 @@ function Home() {
 
   const removeFromCart = (id) => {
     setProductsInCart(prevProducts => prevProducts.filter(product => product.id !==id));
+    manageNotification("Success!","item removed from shopping cart");
   }
 
   const removeAllfromCart = () => {
     setProductsInCart([]);
+  manageNotification("Success!","All items are removed from shopping cart");
+
+  }
+
+  function manageNotification(title, message){ // reusable code for addNotification
+    Store.addNotification({
+      title: title,
+      message: message,
+      type: "success",
+      insert: "top",
+      container: "top-right",
+      animationIn: ["animate__animated", "animate__fadeIn"],
+      animationOut: ["animate__animated", "animate__fadeOut"],
+      dismiss: {
+        duration: 4000,
+        onScreen: true
+      }
+
+  })
   }
   
   return (
     <div>
-    <Header />
+    <ReactNotifications />
     <div className='home-div'>
       <h1 style={{color: 'white'}}>Prinny's Merch Shop</h1>
       
@@ -176,16 +199,20 @@ function Home() {
         <div className="itemInCart">{productsInCart.length}</div>
         <img className="ShoppingBag-btn" src={ShoppingBag} />
       </div>
+      <div className='header-home'>
+        <Header />
+      </div>
       {cartVisibility && (
         <div className='ShoppingCart-div'><ShoppingCart productsInCart={productsInCart} productList={productList} removeFromCart={removeFromCart} checkout={checkout} removeAllfromCart={removeAllfromCart}/>
         </div>
       )}
-      { toggleLoginRemind && <div className='Login-Reminder'><div><h3>Need to log in first!!</h3></div>
-      <div><button onClick={() => {setToggleLoginRemind(false)}}>Ok</button></div></div>}
+      <div id={toggleLoginRemind ? "page-mask" : ""}>
+        { toggleLoginRemind && <div className='Login-Reminder'><div><h3>Need to log in first!!</h3></div>
+        <div><button onClick={() => {setToggleLoginRemind(false)}}>Ok</button></div></div>}
 
-      { successfulMessage && <div className='Checkout-message'><div><h3>Checkout Successful!!</h3><h5>(Payment screen WIP)</h5></div>
-      <div><button onClick={() => {setSuccessfulMessage(false)}}>Ok</button></div></div>}
-
+        { successfulMessage && <div className='Checkout-message'><div><h3>Checkout Successful!!</h3><h5>(Payment screen WIP)</h5></div>
+        <div><button onClick={() => {setSuccessfulMessage(false)}}>Ok</button></div></div>}
+      </div>
       <div className="home-item-container">
 
         {productList.map(product => (
@@ -231,7 +258,6 @@ function Merch({ id, img, description, isActive, onClick, productName, productPr
     if (quantity > 0) {
       addToCart(id, productName, img, quantity, productPrice);
     }
-
     setQuantity(0);
   }
 return (

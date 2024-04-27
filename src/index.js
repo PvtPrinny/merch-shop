@@ -11,3 +11,4 @@ root.render(
 
 //npm i react-auth-kit (for React Auth Kit)
 //npm i -D react-router-dom@latest
+//npm install react-notifications-component
