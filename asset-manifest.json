@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/merch-shop/static/css/main.2ef305db.css",
-    "main.js": "/merch-shop/static/js/main.a816c772.js",
+    "main.css": "/merch-shop/static/css/main.dcfcc3a6.css",
+    "main.js": "/merch-shop/static/js/main.5bae2516.js",
     "static/media/pexels-kubiceknov-924824.jpg": "/merch-shop/static/media/pexels-kubiceknov-924824.3fdd6cf0bf750d8d481b.jpg",
     "static/media/Prinny.png": "/merch-shop/static/media/Prinny.aba12e921ec84821e322.png",
     "static/media/C1_Xs9lVEAAxd1E.png": "/merch-shop/static/media/C1_Xs9lVEAAxd1E.147d08af7df4c29940bb.png",
     "static/media/shopping-bag-svgrepo-com (black).png": "/merch-shop/static/media/shopping-bag-svgrepo-com (black).bafadbc2ce5a7bb16285.png",
     "static/media/home.png": "/merch-shop/static/media/home.f6281babda22bda2c9c1.png",
     "index.html": "/merch-shop/index.html",
-    "main.2ef305db.css.map": "/merch-shop/static/css/main.2ef305db.css.map",
-    "main.a816c772.js.map": "/merch-shop/static/js/main.a816c772.js.map"
+    "main.dcfcc3a6.css.map": "/merch-shop/static/css/main.dcfcc3a6.css.map",
+    "main.5bae2516.js.map": "/merch-shop/static/js/main.5bae2516.js.map"
   },
   "entrypoints": [
-    "static/css/main.2ef305db.css",
-    "static/js/main.a816c772.js"
+    "static/css/main.dcfcc3a6.css",
+    "static/js/main.5bae2516.js"
   ]
 }
