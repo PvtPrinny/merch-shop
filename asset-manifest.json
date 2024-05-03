@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/merch-shop/static/css/main.d888c2e9.css",
+    "main.css": "/merch-shop/static/css/main.da43eedd.css",
     "main.js": "/merch-shop/static/js/main.7a83874d.js",
     "static/media/pexels-kubiceknov-924824.jpg": "/merch-shop/static/media/pexels-kubiceknov-924824.3fdd6cf0bf750d8d481b.jpg",
     "static/media/VisaCardSample.png": "/merch-shop/static/media/VisaCardSample.dad04c52e74f1933ea62.png",
@@ -9,11 +9,11 @@
     "static/media/shopping-bag-svgrepo-com (black).png": "/merch-shop/static/media/shopping-bag-svgrepo-com (black).bafadbc2ce5a7bb16285.png",
     "static/media/home.png": "/merch-shop/static/media/home.f6281babda22bda2c9c1.png",
     "index.html": "/merch-shop/index.html",
-    "main.d888c2e9.css.map": "/merch-shop/static/css/main.d888c2e9.css.map",
+    "main.da43eedd.css.map": "/merch-shop/static/css/main.da43eedd.css.map",
     "main.7a83874d.js.map": "/merch-shop/static/js/main.7a83874d.js.map"
   },
   "entrypoints": [
-    "static/css/main.d888c2e9.css",
+    "static/css/main.da43eedd.css",
     "static/js/main.7a83874d.js"
   ]
 }
